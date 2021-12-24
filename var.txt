@@ -1,0 +1,58 @@
+데이터타입에따라 결과가 크게 달라질 수 있으니
+데이터타입을 정확히 표현하는것에 익숙해져라
+
+
+x = 2 ;
+
+좌항에 우항을 대입한다
+= 대입연산자
+
+즉
+1 = 2 ; 같은경우는 안됨
+때문에 변수명이 숫자로시작하면안된다는것.
+
+대소문자구분됨
+
+예약어사용X
+ex) true 불가능 truE 가능
+
+숫자로시작안됨
+
+특수문자는 _ $ 만 가능
+
+
+|| 필수는 아니지만 가독성 향상을 위해 자바프로그래머들의 암묵적인 약속들.
+(1) 클래스명의 첫 글자는 대문자로 써야 한다.
+(2) 여러 단어로 이루어진 경우 첫 번째 이후 단어의 첫 글자는 대문자로 써야 한다.
+(3) 상수의 이름은 모두 대문자로 써야 한다. 여러 단어일 경우 '_'로 구분한다.
+
+1. 클래스 이름
+
+ - 반드시 대문자로 시작
+ - 생성자 이름은 클래스 이름과 같이 반드시 대문자로 시작
+ - 클래스 이름을 만들 때는 해당클래스가 어떤 목적으로 만들어졌는지 유추 가능하도록 만든다.
+ ex) public class Profile
+      public class UserProfile
+public class UserProfileManager
+
+2. 메소드 이름
+ - 소문자로 시작
+ - 여러 단어로 조합되면 첫 단어를 제외하고 다음 단어의 첫글자는 대문자로 시작
+ - 보통 메소드는 클래스 기능을 담당하므로 동사로 시작
+ ex) public void print()
+      public void printScrean()
+public UserProfile generateUserProfile()
+
+ 
+3. 속성 이름
+ - 소문자로 시작
+ - 다음 단어의 첫글자만 대문자로 표기, 메소드의 명명 규칙과 비슷
+ ex) private String firstName = "Benjamin";
+      private UserProfile userProfile = new UserProfile();
+ 
+4. 상수 이름
+ - 속성이 변하지 않은 상수인 경우에는 모든 글자를 대문자러 표현
+ - 여러 단어로 구성된 변수 이름이라면 단어 사이를 언더바(_)로 구분
+ ex) public String NAME = "Benjamin";
+      pubic Strnig CONT_NAME_USER = "Benjamin";
+

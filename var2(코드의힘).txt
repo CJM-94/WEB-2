@@ -1,0 +1,25 @@
+'Lorem ipsum dolor sit amet consectetur, adipisicing elit. In inventore repellendus natus! Aperiam illo aliquam enim perferendis dolores doloribus, vitae veritatis nam veniam. Non, quasi ipsam. Alias ipsa praesentium officia.'
+
+console.log(
+    'Lorem ipsum dolor sit amet consectetur,
+    adipisicing elit.egoing In inventore repellendus natus!
+    Aperiam illo aliquam egoing enim perferendis dolores doloribus, 
+    itae veritatis nam veniam. egoing Non, quasi ipsam.
+    Alias ipsa praesentium officia.'
+)
+
+여기서 egoing 이라는 단어를 바꾸는데 극단적으로 1억개라면
+불가능함
+
+var name = 'egoing';
+
+console.log(
+    'Lorem ipsum dolor sit amet consectetur,
+    adipisicing elit. '+name+' In inventore repellendus natus!
+    Aperiam illo aliquam '+name+' enim perferendis dolores doloribus, 
+    itae veritatis nam veniam. '+name+' Non, quasi ipsam.
+    Alias ipsa praesentium officia.'
+)
+이렇게한다면 
+name = 'leezche';
+한줄로 1억개의 이름을 다 변경할 수 있음.
