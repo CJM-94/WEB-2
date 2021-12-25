@@ -10,12 +10,20 @@
     red는 value-->
   </head>
   <body>
-    
+   <!-- <body id="target"> 이었다면
+     document.querySelector("#target") 이 됨--> 
     <h1 class="mainTitle"><a href="index.html">WEB</a></h1>
-    <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';">
-    <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';">
+    
+    <input type="button" value="night" onclick="
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+    ">
+    <input type="button" value="day" onclick="
+      document.querySelector('body').style.backgroundColor ='white';
+      document.querySelector('body').style.color = 'black';
+    ">
+
+
     <div id="grid">
       <ol>
         <li><a href="1.html">HTML</a></li>
@@ -46,6 +54,7 @@
     <br />
     <a href="var.txt">var</a>
     <a href="var2(코드의힘).txt">var2</a>
+    <a href="js선택할태그.txt">jsStyle태그</a>
   </body>
 </html>
 <!--https://www.advancedwebranking.com/html/-->

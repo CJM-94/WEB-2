@@ -1,0 +1,18 @@
+html 멈춰있는정보
+js 상호작용으로 움직일수있게해줌
+
+<script>
+  document.write(1+1)
+</script>
+
+<h1> 1+1 </h1>
+
+
+<input type="button" value="night" onclick="alert('hi')">
+
+on ~~ 등과같은걸 ~~한상호작용했을때의 실행임
+이걸 이벤트라고 함
+이러한 속성뒤에는 js가 와야하며 해당속성을 
+js문법으로 해석해 실행시켜라 라는뜻
+
+console.log(1+1);

@@ -1,0 +1,24 @@
+js 제어할 태그 선택하기
+
+
+    <input type="button" value="night" onclick="
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+    ">
+    <input type="button" value="day" onclick="
+      document.querySelector('body').style.backgroundColor ='white';
+      document.querySelector('body').style.color = 'black';
+    ">
+
+js에서 css처럼 선택자사용하려면
+document.querySelector(".myclass");
+
+class면 .클래스명
+id면 #id명
+이후 .style.css속성 ='값'
+
+이벤트시작 즉 onclick="" 큰따옴표쓰고
+css value에 큰따옴표쓰면 "white  앞 큰따옴표에서 onclick 끝나버림
+
+
+검색하려면 javascript style ~~ 
