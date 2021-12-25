@@ -1,0 +1,37 @@
+css의 중요하고 본질적인 문법
+js를 이용해 제어하고자하는 태그를 선택하는방법 중요.
+
+
+
+css
+
+<style>
+   tag {};
+   .class {};
+   #id {};
+</style>
+
+
+text 내용안에 특정 글씨를 css로 꾸며주고싶다.
+하지만 txt 배열이 흐트러지지않게하려면
+<div>ttttttxxxxxxxtttt</div>
+로 하면 div는 블록이기때문에 줄바꿈됨
+<span>tttttttttxxxxxxxxxtttttt</span> 으로 하고
+css에서 span {}; 로 디자인
+
+id class 명은 div태그가 아닌 다른태그에도 가능
+
+class 그룹핑한다
+id 식별한다
+
+동일 class 명은 여러번 사용해도되지만
+id명은 여러번사용하면안됨 작동하기야하겠지만 규약위반.
+
+
+class이름 띄어쓰기로 여러개 줄 수 있음
+
+우선순위는 
+id > class > tag
+
+이후 같은 적용수준이라면 
+css에서 상대적으로 밑의 코드가 적용됨
