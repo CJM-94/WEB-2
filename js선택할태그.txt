@@ -20,5 +20,8 @@ id면 #id명
 이벤트시작 즉 onclick="" 큰따옴표쓰고
 css value에 큰따옴표쓰면 "white  앞 큰따옴표에서 onclick 끝나버림
 
+value값은 css처럼 콜론으로 넣는게아닌
+= 등호기호로 넣음
+
 
 검색하려면 javascript style ~~ 

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WEB1 - WELCOME</title>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" />
+    <!--a는 선택자
+    {}안은 선언,효과 
+    color 는 property 
+    red는 value-->
+  </head>
+  <body>
+   <!-- <body id="target"> 이었다면
+     document.querySelector("#target") 이 됨--> 
+    <h1 class="mainTitle"><a href="index.html">WEB</a></h1>
+    
+    <input id="night_day" type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value === 'night'){
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      document.querySelector('#night_day').value = 'day';
+    } else {
+      document.querySelector('body').style.backgroundColor ='white';
+      document.querySelector('body').style.color = 'black';
+      document.querySelector('#night_day').value = 'night';
+    }
+    ">
+
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ol>
+      <div id="article">
+        <h2>WEB</h2>
+        <p>
+          The World Wide Web has become a major delivery platform for a variety of
+          complex and sophisticated enterprise applications in several domains. In
+          addition to their inherent multifaceted functionality, these Web
+          applications exhibit complex behaviour and place some unique demands on
+          their usability, performance, security, and ability to grow and evolve.
+          However, a vast majority of these applications continue to be developed in
+          an ad hoc way, contributing to problems of usability, maintainability,
+          quality and reliability. While Web development can benefit from
+          established practices from other related disciplines, it has certain
+          distinguishing characteristics that demand special considerations. In
+          recent years, there have been developments towards addressing these
+          considerations.
+        </p>
+      </div>
+    </div>
+  </body>
+  
+    <a href="practice.html">practice</a>
+    <br />
+    <a href="var.txt">var</a>
+    <a href="var2(코드의힘).txt">var2</a>
+    <a href="js선택할태그.txt">jsStyle태그</a>
+  </body>
+  <input id="night_day2" type="button" value="night" onclick="
+  if(document.querySelector('#night_day2').value === 'night'){
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#night_day2').value = 'day';
+  } else {
+    document.querySelector('body').style.backgroundColor ='white';
+    document.querySelector('body').style.color = 'black';
+    document.querySelector('#night_day2').value = 'night';
+  }
+  ">
+  <br>
+  이렇게 동일버튼을 여러개만드려면<br>
+  id값을 다 바꾸어줘야 정상적작동함<br>
+  즉, 불필요한 중복도 중복인데 비효율적임<br>
+  이럴때는 document.querySelector('#night_day') 가 본인을 가르키는 것이므로
+  this를 사용하면됨
+  <input id="night_day2" type="button" value="night" onclick="
+  if(this.value === 'night'){
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    this.value = 'day';
+  } else {
+    document.querySelector('body').style.backgroundColor ='white';
+    document.querySelector('body').style.color = 'black';
+    this.value = 'night';
+  }
+  ">
+
+  <p>document.~~('body')도 여러번중복이 나타남<br>
+    즉 저부분을 target변수로 선언해서 target.style~~로 간결화가능<br>
+    1억개라는 상상을하면 변수target의 값만 바꾸면됨.
+
+  </p>
+
+   <input id="night_day2" type="button" value="night" onclick="
+   var target =document.querySelector('body');
+   if(this.value === 'night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+     this.value = 'day';
+   } else {
+    target.style.backgroundColor ='white';
+    target.style.color = 'black';
+     this.value = 'night';
+   }
+   "> 
+
+   <p>
+    javascript get element value<br>
+<br>
+    function doSomething(id) {<br>
+      <h3>var value = document.getElementById(id).value;</h3><br>
+      console.log(value);<br>
+      //...
+    }
+    
+   </p>
+</html>
+<!--https://www.advancedwebranking.com/html/-->
