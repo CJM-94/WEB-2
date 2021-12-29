@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Loop & Array</h1>
+    <script>
+      var coworkers = ["egoing", "leezche", "duru", "taeho", "asdfasdf"];
+    </script>
+    <h2>Co workers</h2>
+    <ul>
+      <script>
+        var i = 0;
+        while (i < coworkers.length) {
+          document.write("<li>" + coworkers[i] + "</li>");
+          i++;
+        }
+      </script>
+      <p>
+        coworkers 원소가바뀐다고<br />
+        while조건문 즉 4명이라고 4를 적거나<br />
+        이러한 원소가바뀐다고 로직이바뀌는경우는 최악.<br />
+        coworkers.length하면 더이상 저 로직은 건들지않아도됨
+      </p>
+    </ul>
+    <!--<ul>
+      <li>egoing</li>
+      <li>leezche</li>
+      <li>duru</li>
+      <li>taeho</li>
+    </ul>-->
+  </body>
+</html>
