@@ -4,15 +4,22 @@
     <title>WEB1 - WELCOME</title>
     <meta charset="utf-8" />
     <link href="style.css" rel="stylesheet" />
-    <script>
-      function nightDayHandler(self){
-        //인자로받은 this값을 self 매개변수에 넣어서 처리
-        //여러번사용가능한 독립된 함수로 만드는데 this를 여기넣으면 안됨
+    <!--a는 선택자
+    {}안은 선언,효과 
+    color 는 property 
+    red는 value-->
+  </head>
+  <body>
+   <!-- <body id="target"> 이었다면
+     document.querySelector("#target") 이 됨--> 
+    <h1 class="mainTitle"><a href="index.html">WEB</a></h1>
+    
+    <input id="night_day" type="button" value="night" onclick="
       var target = document.querySelector('body');
-      if(self.value === 'night'){
+      if(this.value === 'night'){
         target.style.backgroundColor = 'black';
         target.style.color = 'white';
-        self.value = 'day';
+        this.value = 'day';
 
         var alist = document.querySelectorAll('a');
         var i = 0;
@@ -26,7 +33,7 @@
       } else {
         target.style.backgroundColor ='white';
         target.style.color = 'black';
-         self.value = 'night';
+         this.value = 'night';
         
         var alist = document.querySelectorAll('a');
         var i = 0;
@@ -36,16 +43,6 @@
            i = i + 1;
         } 
       }
-    }
-    </script>
-  </head>
-  <body>
-   <!-- <body id="target"> 이었다면
-     document.querySelector("#target") 이 됨--> 
-    <h1 class="mainTitle"><a href="index.html">WEB</a></h1>
-    
-    <input id="night_day" type="button" value="night" onclick="
-    nightDayHandler(this);//이 input id 엘리먼트를 this로 인자값으로 받아서 함수에 넘김
     ">
 
     <div id="grid">
