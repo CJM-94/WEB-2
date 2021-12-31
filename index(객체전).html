@@ -5,50 +5,49 @@
     <meta charset="utf-8" />
     <link href="style.css" rel="stylesheet" />
     <script>
-      
-      var Links = {
-        setColor:function(color){
+      function setColor(){
 
         var alist = document.querySelectorAll('a');
         var i = 0;
         while(i<alist.length){
-            alist[i].style.color = color;
-            i = i + 1;
-          } 
-        }
-      };
-
+    
+           alist[i].style.color = 'powderblue';
+           i = i + 1;
+        } 
+      }
       
-      var Body = {
-          setColor:function(color){
-          document.querySelector('body').style.color = color;
-        },//프로퍼티사이에 콤마가있어야함
-          setBackgroundColor:function(color){
-          document.querySelector('body').style.backgroundColor = color;
-        }
-      };
-
       function nightDayHandler(self){
         //인자로받은 this값을 self 매개변수에 넣어서 처리
         //여러번사용가능한 독립된 함수로 만드는데 this를 여기넣으면 안됨
-        var target = document.querySelector('body');
-        if(self.value === 'night'){
-          Body.setBackgroundColor('black');
-          Body.setColor('white');
-          self.value = 'day';
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = 'day';
 
-          Links.setColor('powderblue');
-          
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+    
+           alist[i].style.color = 'powderblue';
+           i = i + 1;
+        } 
 
 
-        } else {
-          Body.setBackgroundColor('white');
-          Body.setColor('black');
-          self.value = 'night';
-          
-          Links.setColor('blue');
-        }
+      } else {
+        target.style.backgroundColor ='white';
+        target.style.color = 'black';
+         self.value = 'night';
+        
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+    
+           alist[i].style.color = 'blue';
+           i = i + 1;
+        } 
       }
+    }
     </script>
   </head>
   <body>
@@ -88,11 +87,11 @@
   
     <a href="practice.html">practice</a>
     <br />
-    <a href="var.txt">var</a><br>
-    <a href="var2(코드의힘).txt">var2</a><br>
-    <a href="js선택할태그.txt">jsStyle태그</a><br>
-    <a href="ex9(함수).html">함수예시</a><br>
-    <a href="ex10(객체).html">객체예시</a><br>
+    <a href="var.txt">var</a>
+    <a href="var2(코드의힘).txt">var2</a>
+    <a href="js선택할태그.txt">jsStyle태그</a>
+    <a href="ex9(함수).html">함수예시</a>
   </body>
   
 </html>
+<!--https://www.advancedwebranking.com/html/-->
