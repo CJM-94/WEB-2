@@ -4,8 +4,52 @@
     <title>WEB1 - WELCOME</title>
     <meta charset="utf-8" />
     <link href="style.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="colors.js"></script>
+    <script>
+      
+      var Links = {
+        setColor:function(color){
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+            alist[i].style.color = color;
+            i = i + 1;
+          } 
+        }
+      };
+
+      
+      var Body = {
+          setColor:function(color){
+          document.querySelector('body').style.color = color;
+        },//프로퍼티사이에 콤마가있어야함
+          setBackgroundColor:function(color){
+          document.querySelector('body').style.backgroundColor = color;
+        }
+      };
+
+      function nightDayHandler(self){
+        //인자로받은 this값을 self 매개변수에 넣어서 처리
+        //여러번사용가능한 독립된 함수로 만드는데 this를 여기넣으면 안됨
+        var target = document.querySelector('body');
+        if(self.value === 'night'){
+          Body.setBackgroundColor('black');
+          Body.setColor('white');
+          self.value = 'day';
+
+          Links.setColor('powderblue');
+          
+
+
+        } else {
+          Body.setBackgroundColor('white');
+          Body.setColor('black');
+          self.value = 'night';
+          
+          Links.setColor('blue');
+        }
+      }
+    </script>
   </head>
   <body>
    <!-- <body id="target"> 이었다면
@@ -50,7 +94,6 @@
     <a href="ex9(함수).html">함수예시</a><br>
     <a href="ex10(객체).html">객체예시</a><br>
     <a href="ex10(객체).txt">객체예시txt</a><br>
-    <a href="framework_library.html">함수,객체,라이브러리 요약</a><br>
   </body>
   
 </html>
